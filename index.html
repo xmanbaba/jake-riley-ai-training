@@ -7,7 +7,368 @@
     <meta name="keywords" content="AI Training, KRPC, Jake Riley Academy, NNPC Academy, Refinery, Artificial Intelligence">
     <meta name="author" content="Jake Riley Academy & NNPC Academy">
     <title>NNPC AI Training Timetable - Jake Riley Academy</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* COMPLETE INLINE STYLING - NO EXTERNAL CSS NEEDED */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* LOGOS - SIDE BY SIDE */
+        .logos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            flex-wrap: nowrap;
+        }
+
+        .logo {
+            max-width: 120px;
+            max-height: 60px;
+            height: auto;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-left {
+            text-align: left;
+            flex: 0 0 auto;
+        }
+
+        .logo-right {
+            text-align: right;
+            flex: 0 0 auto;
+        }
+
+        /* HEADER */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2E5AAC;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        /* INFO TABLE - GRID WITH BORDERS */
+        .info-table {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin-bottom: 30px;
+            border: 2px solid #2E5AAC;
+        }
+
+        .info-cell {
+            background-color: white;
+            padding: 15px;
+            text-align: center;
+            border-right: 1px solid #2E5AAC;
+            border-bottom: 0;
+        }
+
+        .info-cell:last-child {
+            border-right: none;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #2E5AAC;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .info-value {
+            color: #2E5AAC;
+            font-size: 0.9em;
+            display: block;
+        }
+
+        /* LEARNING OUTCOMES */
+        .outcomes-section {
+            margin: 30px 0;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: #2E5AAC;
+            margin-bottom: 20px;
+        }
+
+        .outcome-box {
+            margin-bottom: 15px;
+            padding: 20px;
+            border: 2px solid;
+            border-radius: 4px;
+        }
+
+        .outcome-box h3 {
+            font-size: 1.2em;
+            margin-bottom: 12px;
+        }
+
+        .outcome-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .outcome-box li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.95em;
+        }
+
+        .outcome-box li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .knowledge {
+            background-color: #D6E5F7;
+            border-color: #2E5AAC;
+        }
+
+        .knowledge h3 {
+            color: #2E5AAC;
+        }
+
+        .skills {
+            background-color: #D5F4E6;
+            border-color: #0D9A4D;
+        }
+
+        .skills h3 {
+            color: #0D9A4D;
+        }
+
+        .attitudes {
+            background-color: #FFF4D6;
+            border-color: #D97706;
+        }
+
+        .attitudes h3 {
+            color: #D97706;
+        }
+
+        .actions {
+            background-color: #FFE4E4;
+            border-color: #DC2626;
+        }
+
+        .actions h3 {
+            color: #DC2626;
+        }
+
+        /* SCHEDULE SECTION */
+        .schedule-section {
+            margin-top: 40px;
+        }
+
+        .day-section {
+            margin-bottom: 40px;
+        }
+
+        .day-title {
+            background-color: #f8f9fa;
+            padding: 15px;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            border-left: 5px solid #2E5AAC;
+        }
+
+        /* TABLES - FORCED RENDERING */
+        table,
+        .schedule-table {
+            display: table !important;
+            width: 100% !important;
+            border-collapse: collapse !important;
+            margin-bottom: 30px !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+            table-layout: fixed !important;
+        }
+
+        thead {
+            display: table-header-group !important;
+            background-color: #2E5AAC !important;
+            color: white !important;
+        }
+
+        tbody {
+            display: table-row-group !important;
+        }
+
+        tr {
+            display: table-row !important;
+        }
+
+        th {
+            display: table-cell !important;
+            padding: 12px !important;
+            text-align: left !important;
+            font-weight: bold !important;
+            font-size: 0.95em !important;
+            border: 1px solid #2E5AAC !important;
+            background-color: #2E5AAC !important;
+            color: white !important;
+        }
+
+        td {
+            display: table-cell !important;
+            padding: 12px !important;
+            border: 1px solid #CCCCCC !important;
+            font-size: 0.9em !important;
+            vertical-align: top !important;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #F5F8FA;
+        }
+
+        tbody tr:hover {
+            background-color: #E8F0FE;
+        }
+
+        .time-cell {
+            width: 15%;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .activity-cell {
+            width: 35%;
+            font-weight: 500;
+        }
+
+        .details-cell {
+            width: 50%;
+        }
+
+        .bold-activity {
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #2E5AAC;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .logos {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .logo-left,
+            .logo-right {
+                text-align: center;
+            }
+
+            .info-table {
+                grid-template-columns: 1fr;
+            }
+
+            .info-cell {
+                border-right: none;
+                border-bottom: 1px solid #2E5AAC;
+            }
+
+            .info-cell:last-child {
+                border-bottom: none;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            table,
+            .schedule-table {
+                font-size: 0.8em !important;
+            }
+
+            th,
+            td {
+                padding: 8px !important;
+            }
+        }
+
+        /* PRINT */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+
+            .day-section {
+                page-break-inside: avoid;
+            }
+
+            .schedule-section {
+                page-break-before: always;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -33,20 +394,20 @@
         <!-- Info Table -->
         <div class="info-table">
             <div class="info-cell">
-                <div class="info-label">Venue:</div>
-                <div class="info-value">Jake Riley Academy Office, Abuja</div>
+                <span class="info-label">Venue:</span>
+                <span class="info-value">Jake Riley Academy Office, Abuja</span>
             </div>
             <div class="info-cell">
-                <div class="info-label">Trainer:</div>
-                <div class="info-value">Suleiman Shaibu</div>
+                <span class="info-label">Trainer:</span>
+                <span class="info-value">Suleiman Shaibu</span>
             </div>
             <div class="info-cell">
-                <div class="info-label">Dates:</div>
-                <div class="info-value">Oct 27 - 31, 2025</div>
+                <span class="info-label">Dates:</span>
+                <span class="info-value">Oct 27 - 31, 2025</span>
             </div>
             <div class="info-cell">
-                <div class="info-label">Participants:</div>
-                <div class="info-value">20 Middle Managers & Operators</div>
+                <span class="info-label">Participants:</span>
+                <span class="info-value">20 Middle Managers & Operators</span>
             </div>
         </div>
 

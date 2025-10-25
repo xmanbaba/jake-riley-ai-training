@@ -1,0 +1,318 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.logo-left {
+    text-align: left;
+}
+
+.logo-right {
+    text-align: right;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #2E5AAC;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* Info Table */
+.info-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-bottom: 30px;
+    border: 2px solid #2E5AAC;
+}
+
+.info-cell {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border-right: 1px solid #2E5AAC;
+}
+
+.info-cell:last-child {
+    border-right: none;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #2E5AAC;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    color: #2E5AAC;
+    font-size: 0.9em;
+}
+
+/* Learning Outcomes */
+.outcomes-section {
+    margin: 30px 0;
+}
+
+.section-title {
+    font-size: 1.5em;
+    color: #2E5AAC;
+    margin-bottom: 20px;
+}
+
+.outcome-box {
+    margin-bottom: 15px;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 4px;
+}
+
+.outcome-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 12px;
+}
+
+.outcome-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.outcome-box li {
+    padding: 5px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.95em;
+}
+
+.outcome-box li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.knowledge {
+    background-color: #D6E5F7;
+    border-color: #2E5AAC;
+}
+
+.knowledge h3 {
+    color: #2E5AAC;
+}
+
+.skills {
+    background-color: #D5F4E6;
+    border-color: #0D9A4D;
+}
+
+.skills h3 {
+    color: #0D9A4D;
+}
+
+.attitudes {
+    background-color: #FFF4D6;
+    border-color: #D97706;
+}
+
+.attitudes h3 {
+    color: #D97706;
+}
+
+.actions {
+    background-color: #FFE4E4;
+    border-color: #DC2626;
+}
+
+.actions h3 {
+    color: #DC2626;
+}
+
+/* Schedule Section */
+.schedule-section {
+    margin-top: 40px;
+}
+
+.day-section {
+    margin-bottom: 40px;
+}
+
+.day-title {
+    background-color: #f8f9fa;
+    padding: 15px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    border-left: 5px solid #2E5AAC;
+}
+
+/* Schedule Table */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-table thead {
+    background-color: #2E5AAC;
+    color: white;
+}
+
+.schedule-table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.schedule-table td {
+    padding: 12px;
+    border: 1px solid #CCCCCC;
+    font-size: 0.9em;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: #F5F8FA;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: #E8F0FE;
+}
+
+.time-cell {
+    width: 15%;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.activity-cell {
+    width: 35%;
+    font-weight: 500;
+}
+
+.details-cell {
+    width: 50%;
+}
+
+.bold-activity {
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #2E5AAC;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        padding: 20px;
+    }
+
+    .day-section {
+        page-break-inside: avoid;
+    }
+
+    .schedule-section {
+        page-break-before: always;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .info-table {
+        grid-template-columns: 1fr;
+    }
+
+    .info-cell {
+        border-right: none;
+        border-bottom: 1px solid #2E5AAC;
+    }
+
+    .info-cell:last-child {
+        border-bottom: none;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .schedule-table {
+        font-size: 0.8em;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        padding: 8px;
+    }
+}
